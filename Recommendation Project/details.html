@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div style="display: flex; background-color: black; padding: 20px">
+      <div
+        style="
+          border-radius: 30px;
+          overflow: hidden;
+          margin: 80px;
+          position: relative;
+          width: 100rem;
+        "
+      >
+        <img
+          src="liberty.jpg"
+          alt="作品图片"
+          style="width: 100%; height: auto"
+        />
+        <button
+          class="favorite-btn"
+          id="favorite-btn"
+          style="
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: none;
+            outline: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <span class="heart-icon">
+            <svg
+              id="heart"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 26 26"
+              fill="none"
+              stroke="gray"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-heart"
+              style="width: 30px; height: 30px"
+            >
+              <path
+                d="M20.84 4.82a5.5 5.5 0 0 0-7.78 0L12 5.94l-1.06-1.12a5.5 5.5 0 0 0-7.78 7.78L12 21l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"
+                style="stroke-width: 1"
+              ></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="details">
+        <h1 class="title" style="margin-bottom: 40px">
+          Liberty leading the people
+        </h1>
+        <p class="description">Artist:Delacroi</p>
+        <p class="description">Genre:Realism</p>
+        <p class="description">Region:France</p>
+        <p class="description">
+          Description:Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Corporis dicta unde laboriosam, dolor totam consequatur non tempora ea
+          corrupti veritatis maiores aperiam tempore harum eum assumenda sint
+          recusandae, magni quas.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const heart = document.getElementById("heart");
+      const heartButton = document.getElementById("favorite-btn");
+      heartButton.addEventListener("click", () => {
+        heart.classList.toggle("red");
+      });
+    </script>
+  </body>
+</html>
