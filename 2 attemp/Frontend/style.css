@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: "Lora", serif;
+}
+
+.carouselExample {
+  position: relative;
+  /* 其他页面样式 */
+}
+
+.signup-btn {
+  position: absolute;
+  z-index: 1000;
+  top: 10px;
+  right: 20px;
+}
+
+.container {
+  display: flex;
+  /* align-items: center; */
+  margin-top: 30px;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.title {
+  color: white;
+  margin-right: 1rem;
+}
+
+.prev-button,
+.next-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  display: block;
+  margin: 20px;
+}
+
+.prev-button:hover {
+  color: white;
+}
+
+.next-button:hover {
+  color: white;
+}
+
+.card-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1400px;
+  overflow-x: scroll;
+}
+
+.card {
+  transition: transform 0.2s ease-in-out;
+  background-color: #282828;
+  width: 18rem; /* 设置固定宽度 */
+  height: auto;
+  margin: 30px 20px 30px 20px;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+/* 
+.card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img:active {
+  transform: scale(0.95);
+  box-shadow: none;
+} */
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.card:active {
+  transform: scale(0.95);
+  border-radius: 20px;
+}
+
+.card img {
+  width: 100%; /* 图片宽度占满父容器 */
+  height: 18rem;
+  border-radius: 20px;
+
+  object-fit: cover; /* 图片等比缩放，覆盖整个容器 */
+  object-position: center center; /* 图片居中放置 */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  border-width: 2px;
+  border-color: black;
+  /* color: #e6e6e6; */
+}
+
+.form-control::placeholder {
+  color: #999;
+}
+
+label {
+  font-weight: bold;
+}
+
+.favorite-btn {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.heart-icon {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.feather-heart path {
+  stroke: gray;
+  fill: none;
+}
+
+.red path {
+  stroke: red;
+  fill: red;
+}
+
+.favorite-btn:hover .heart-icon {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-btn:active .heart-icon {
+  transform: scale(0.8);
+  box-shadow: none;
+}
+
+.details {
+  text-align: justify;
+  color: white;
+  margin-top: 100px;
+  margin-right: 40px;
+  font-size: 18px;
+  /* height: 100%;
+  overflow: scroll; */
+}
